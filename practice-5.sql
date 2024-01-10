@@ -1,5 +1,10 @@
 -- How many of each property type are there in Hyde Park?
 
+SELECT property_type, COUNT(*) FROM listings
+WHERE neighborhood = 'Hyde Park'
+GROUP BY property_type
+ORDER BY COUNT(*) DESC;
+
 -- +-------------------------------------+----------+
 -- | Entire condominium (condo)          | 6        |
 -- | Entire guest suite                  | 1        |
@@ -11,5 +16,6 @@
 -- | Private room in residential home    | 12       |
 -- | Private room in townhouse           | 3        |
 -- +-------------------------------------+----------+
+
 
 
